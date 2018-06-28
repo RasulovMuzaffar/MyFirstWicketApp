@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<form wicket:id="form">
+    <label>ID : </label><br/>
+    <input type="text" wicket:id="id"/>
+    <br/><br/>
+    <label>first_name : </label>
+    <br/>
+    <input type="text" wicket:id="fName"/>
+    <br/><br/>
+    <label>last_name : </label>
+    <br/>
+    <input type="text" wicket:id="lName"/>
+    <br/><br/>
+    <label>age : </label>
+    <br/>
+    <input type="text" wicket:id="age"/>
+    <br/>
+    <input type="submit" wicket:id="submit" value="add"/>
+    <input type="submit" wicket:id="editBtn" value="edit"/>
+</form>
+<br/><br/>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>fName</th>
+        <th>lName</th>
+        <th>age</th>
+        <th>edit</th>
+        <th>delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr wicket:id="listView">
+        <td wicket:id="id"></td>
+        <td wicket:id="fName"></td>
+        <td wicket:id="lName"></td>
+        <td wicket:id="age"></td>
+        <td wicket:id="edit"><a href="#">edit</a></td>
+        <td wicket:id="delete"><a href="#">delete</a></td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    function edt(p) {
+        console.log(p)
+        console.log(document.querySelector(".edit"))
+    }
+</script>
+</body>
+</html>
